@@ -24,14 +24,28 @@ const noteAboutToday ={
 }
 notes.push(noteAboutToday)
 
-for (const note of notes) {
-    console.log(`Note ${note.id}
-    ${note.date}
-    Today I learned about ${note.subject}.
-    I spent ${note.timeSpent} hours watching it.
-    I felt this was ${note.feeling}.
-    -------------------
-    `)
-}
+// Chapter 4 - 
 
-// console.log(note)
+const searchTerm = "The First Avenger"
+
+for (const note of notes) {
+    if (note.feeling === searchTerm) {
+        note.timeSpent = note.timeSpent + 1
+    }
+}
+console.log(notes)
+
+
+
+// Chapter 3 - 
+// for (const note of notes) {
+//     console.log(`Note ${note.id}
+//     ${note.date}
+//     Today I learned about ${note.subject}.
+//     I spent ${note.timeSpent} hours watching it.
+//     I felt this was ${note.feeling}.
+//     -------------------
+//     `)
+// }
+
+// Chapter 1&2 - console.log(note)
